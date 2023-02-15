@@ -1,0 +1,72 @@
+SEARCH MODULE
+
+Introduction Concepts:
+
+Agent : Entity that perceives its environment and acts upon that environment.
+
+State : A configuration of the state an its environment.
+
+Actions : choices that can be made in any given state, we can define them also as functions;
+def Action(s): 
+    returns the set of actions that can be executed in that state s.
+
+Transition Model : A description of what state results from performing any applicable action 
+in any state, defined as a function:
+def results(s, a):
+    return the state resulting from performing action a in state s.
+
+State space : the set of all states reachable from the initial state by any 
+sequence of actions.
+
+Goal Test : A way of determine whether a given state is a goal state, taking goal state as
+the solution state of our problem, it can be one solution or multiple solutions.
+
+Path cost : numerical cost associated with a given path.
+
+SEARCH PROBLEM 
+--> Initial State
+--> Actions
+--> Transition Model
+--> Goal Test
+--> Path Cost Function 
+= Solution : A sequence of actions that lead from the initial state to a goal state
+== Optimal solution : Solution that has the lowest path cost among all solution
+
+Node : A node is a data structure that keeps track of 
+    - A state 
+    - A parent (node that generated this node)
+    - An action (action applied to parent to get node)
+    - A path cost (from initial state to node)
+
+Frontier : All the available paths or options sotred inside of a single data structure 
+called frontier. Also we can define it as all the thinks (paths or options) thay we could 
+explore next, that we haven't yet explored or visited.
+
+Approach 
+    * Start with a frontier that contains the initial state.
+    * Start with an empty explored set.
+    * Repeat:
+        * If the frontier is empty, then no solution
+        * Remove a node from the frontier
+        * If node contains goal state, return the solution
+        * Add the node to the explored set 
+        * Otherwise, expand node, add resulting nodes to the frontier if they aren't
+          already in the frontier or the explored set
+
+Data Structures
+--> Stack : last-in first-out
+--> Queue : first-in first-out 
+
+Search Algoritms
+--> Depth-First Search : Always expands the deepest node in the frontier. (Stack)
+--> Breadth-First Search : Always expands the shallowest node in the frontier. (Queue)
+
+min 49 : 00 
+
+
+
+
+
+
+
+

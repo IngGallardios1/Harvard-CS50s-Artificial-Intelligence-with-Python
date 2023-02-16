@@ -1,6 +1,9 @@
-SEARCH MODULE
+=====================
+INTRODUCTION MODULE
+=====================
 
 Introduction Concepts:
+
 
 Agent : Entity that perceives its environment and acts upon that environment.
 
@@ -60,10 +63,38 @@ Data Structures
 Search Algoritms
 --> Depth-First Search : Always expands the deepest node in the frontier. (Stack)
 --> Breadth-First Search : Always expands the shallowest node in the frontier. (Queue)
+* This 2 Search Algoritms are whats called uninformed search: search strategy that uses no
+problem-specific knowledge
 
-min 49 : 00 
+Informed Search: 
+Search strategy that uses problem-specific knowledge to find solutions 
+more efficiently.
+--> Greedy Best-First Search : Search Algorithm that expands the node that is closest to 
+the goal, as estimated by a heuristic function h(n).
+--> A* Search : Search algorithm that expands node with lowest value of g(n) + h(n).
+g(n): Cost to reach node.
+h(n): Estimated costo to goal.
+A* Search is optimal if:
+- h(n) is admissible (never overestimates the true cost)
+- h(n) is consistent (for every node n and successor n' with step cost c, h(n) <= h(n') + c)
 
 
+Minimax 
+MAX aims to maximize score
+MIN aims to minimize score
+
+=================
+TIC TAC TOE GAME
+=================
+
+Functions:
+- Player(s): returns which player to move in state s.
+- Action(s): returns legal moves in state s.
+- Results(s,a): returns state after action a taken in state s.
+- Terminal(s): checks if a state s is a terminal state.
+- Utility(s): final numerical value for terminal state s.
+
+min ======= 1 : 25 : 44
 
 
 

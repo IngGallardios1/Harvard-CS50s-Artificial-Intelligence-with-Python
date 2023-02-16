@@ -94,10 +94,36 @@ Functions:
 - Terminal(s): checks if a state s is a terminal state.
 - Utility(s): final numerical value for terminal state s.
 
-min ======= 1 : 25 : 44
+MiniMax 
+Given a state s:
+    - MAX picks action a in Action(s) that produces highest value of
+    Min-Value(Result(s,a))
+    - MIN picks action a in Action(s) that produces smallest value of
+    Max-Value(Result(s,a))
+
+        def Max-Value(Result(s,a)):
+            if Terminal(s):
+                return Utility(s)
+            v = -infinity
+            for action in Action(s):
+                v = MAX(v, Min-Value(Result(s,a))
+                return v
+
+        def Min-Value(Result(s,a)):
+            if Terminal(s):
+                return Utility(s)
+            v = infinity
+            for action in Action(s):
+                v = MIN(v, Max-Value(Result(s,a))
+                return v
 
 
+Alpha-Beta Pruning
 
+
+Depth-Limited MiniMax
+Evaluation Function : Function that estimates the expected utility of the
+game from a given state.
 
 
 
